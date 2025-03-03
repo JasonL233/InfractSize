@@ -1,13 +1,11 @@
 from app import db
 
-class UploadedImages(db.Model):
+class Friend(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    filename = db.Column(db.String(100), nullable=False)
-    image = db.Column(db.String(200), nullable=True)
+    name = db.Column(db.String(100), nullable=False)
 
-def to_json(self):
-    return {
-        "id": self.id,
-        "filename": self.filename,
-        "image": self.image
-    }
+    def to_json(self):
+        return {
+            "id": self.id,
+            "name": self.name,
+        }

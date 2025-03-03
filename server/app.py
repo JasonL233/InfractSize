@@ -5,7 +5,7 @@ from flask_cors import CORS
 
 #-------------------------Config-------------------------#
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins="http://localhost:5174")
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///infractionData.db'
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
